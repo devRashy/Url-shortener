@@ -9,5 +9,11 @@ const connectDB = async() => {
             useCreateIndex: true,
             useUnifiedTopology: true
         })
+        console.log('MongoDB connected')
+    } catch(err) {
+        console.log(err.message)
+        process.exit
     }
 }
+
+module.exports = connectDB
